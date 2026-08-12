@@ -58,11 +58,5 @@ if options:
         st.image('animation.gif', width=300)
 
         # Inference
-        model = load_model()
-        yhat = model.predict(tf.expand_dims(video, axis=0))
-        decoder = tf.keras.backend.ctc_decode(yhat, [75], greedy=True)[0][0].numpy()
-
-        # Final decoded prediction
         st.info('Final lip reading result')
-        converted_prediction = tf.strings.reduce_join(num_to_char(decoder)).numpy().decode('utf-8')
-        st.text(converted_prediction)
+        st.warning('⚠️ Prediction disabled in this deployment: trained model weights (GRID corpus checkpoint) were not included due to file size. This demo showcases the video preprocessing and lip-frame extraction pipeline. See README for how to add trained weights.')
