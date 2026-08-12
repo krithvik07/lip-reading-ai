@@ -15,8 +15,8 @@ st.set_page_config(layout='wide')
 st.markdown("<h2 style='text-align: center;'>🧑‍🏫🧠 Lip Reading App 🎬🗣️</h2>", unsafe_allow_html=True)
 
 # Load available videos
-video_dir = os.path.join('..', 'data', 's1')
-options = os.listdir(video_dir)
+video_dir = '.'
+options = [f for f in os.listdir(video_dir) if f.endswith('.mpg') or f.endswith('.mp4')]
 selected_video = st.selectbox('Choose a video to analyze', options)
 
 # Layout columns
