@@ -54,7 +54,7 @@ if options:
             frame_resized = tf.image.resize(frame_np[..., tf.newaxis], (80, 80)).numpy().astype(np.uint8)
             gif_frames.append(np.squeeze(frame_resized))
 
-        imageio.mimsave('animation.gif', gif_frames, fps=10)
+        imageio.mimsave('animation.gif', gif_frames, duration=100)
         st.image('animation.gif', width=300)
 
         # Inference
