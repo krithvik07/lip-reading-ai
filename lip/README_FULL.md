@@ -110,11 +110,13 @@ pip install -r requirements.txt
 
 ```text
 tensorflow==2.10.1
+numpy==1.23.5
+pandas==1.5.3
 streamlit==1.21.0
-opencv-python
-imageio
-Pillow
-numpy
+opencv-python-headless==4.7.0.72
+imageio==2.31.1
+imageio-ffmpeg==0.4.9
+Pillow==9.5.0
 ```
 
 Ensure **FFmpeg** is installed and added to your system path.
